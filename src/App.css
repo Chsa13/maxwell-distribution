@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* background: linear-gradient(135deg, #64B5F6, #BA68C8); */
+  /* background: linear-gradient(135deg, #E3F2FD, #80DEEA); */
+  /* background: linear-gradient(135deg, #E3F2FD, #FFCC80); */
+  /* background: linear-gradient(135deg, #E3F2FD, #A5D6A7); */
+  background: linear-gradient(135deg, #E3F2FD, #a3d6ff);
+  /* background-color: #E3F2FD; */
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* margin: 2rem; */
+  /* text-align: center; */
 }
 
 .logo {

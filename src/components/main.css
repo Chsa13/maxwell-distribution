@@ -1,0 +1,27 @@
+/* Стили для больших экранов */
+#chart-wrapper {
+  flex-direction: row;
+}
+#chart{
+  margin-top: 100px;
+}
+button.delBtn{
+  background-color: #ff4d4d;
+}
+button.delBtn:hover{
+  background-color: rgb(198, 71, 71);
+}
+.gase-selector{
+  display: flex;
+  flex-grow: 1;
+  margin-left: 10px;
+  width: 100%;
+}
+@media (max-width: 1350px) {
+  #chart-wrapper {
+    flex-direction: column;
+  }
+  #chart {
+    margin-top: unset;
+  }
+}
