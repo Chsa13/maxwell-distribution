@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub } from 'react-icons/fa'; // Импортируем иконку книжки и крестика
 
 export default function Footer(){
   return(
@@ -9,7 +10,10 @@ export default function Footer(){
   <div style={{
     marginLeft: "10px"
   }}>
-    <a href={"https://github.com/Chsa13/maxwell-distribution"}>Репозиторий проекта</a>
+    <a style={{
+      display: "flex",
+      alignItems: "center"
+    }}href={"https://github.com/Chsa13/maxwell-distribution"}><FaGithub style={{margin: "3px"}}/>Репозиторий проекта</a>
   </div>
     <div className="footer-content">
         <p>© 2025 Чернов Семён <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>

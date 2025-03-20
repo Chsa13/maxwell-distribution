@@ -140,7 +140,7 @@ const Chart = () => {
     <div id="chart-wrapper" style={{
       flexGrow: "1",
         display: "flex",
-        width: "calc(100vw - 15px )", // Занимает всю высоту экрана
+        width: "calc(100vw - 20px )", // Занимает всю высоту экрана
         padding: "10px", // Отступы по краям
         boxSizing: "border-box", // Учитываем padding в размерах
       }}>
