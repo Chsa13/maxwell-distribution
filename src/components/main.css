@@ -25,3 +25,14 @@ button.delBtn:hover{
     margin-top: unset;
   }
 }
+@media (max-width: 500px) {
+  #title{
+    flex-direction: column;
+  }
+  #title img{
+    padding-bottom: 15px;
+  }
+  #inputs-wrapper{
+    flex-direction: column;
+  }
+}

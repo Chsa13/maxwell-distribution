@@ -3,14 +3,15 @@
   /* background: linear-gradient(135deg, #E3F2FD, #80DEEA); */
   /* background: linear-gradient(135deg, #E3F2FD, #FFCC80); */
   /* background: linear-gradient(135deg, #E3F2FD, #A5D6A7); */
+  /* background: linear-gradient(135deg, #E3F2FD, #a3d6ff); */
   background: linear-gradient(135deg, #E3F2FD, #a3d6ff);
+  flex-grow: 1;
   /* background-color: #E3F2FD; */
   /* max-width: 1280px; */
   /* margin: 0 auto; */
   /* margin: 2rem; */
   /* text-align: center; */
 }
-
 .logo {
   height: 6em;
   padding: 1.5em;

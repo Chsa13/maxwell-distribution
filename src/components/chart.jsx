@@ -86,7 +86,7 @@ const Chart = () => {
 
   // Данные для графика
   const data = {
-    labels: Array.from({ length: 1300 }, (_, i) => i), // x от -10 до 10
+    labels: Array.from({ length: 1500 }, (_, i) => i), // x от -10 до 10
     datasets: datasets, // Используем текущее состояние datasets
   };
 
@@ -126,13 +126,13 @@ const Chart = () => {
   return (
     <div id="chart-wrapper" style={{
         display: "flex",
-        width: "100vw", // Занимает всю высоту экрана
+        width: "calc(100vw - 20px )", // Занимает всю высоту экрана
         padding: "10px", // Отступы по краям
         boxSizing: "border-box", // Учитываем padding в размерах
       }}>
 
       <div style={{margin: "20px", fontSize: "18px"}}>
-        <div style={{
+        <div id={"inputs-wrapper"} style={{
           display: 'flex',
           borderBottom: "3px solid black",
           paddingBottom: "20px",
@@ -189,7 +189,14 @@ const Chart = () => {
         </div>
       </div>
       </div>
-      <div id= "chart" style={{minWidth:"400px", display:"flex", alignItems: "center", flexGrow: "1", height: "calc( 45vh + 10vw )"}}>
+      <div id= "chart" style={{
+        minWidth:"350px", 
+        display:"flex", 
+        alignItems: "center", 
+        flexGrow: "1", 
+        height: "calc( 45vh + 10vw )",
+        // marginRight: "15px"
+      }}>
         <Line ref= {chartRef} data={data} options={options} />
       </div>
     </div>
