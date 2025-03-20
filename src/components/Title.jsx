@@ -5,7 +5,7 @@ export default function Title(){
   return (
     <div id={"title"} style={{display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "rgb(96 203 214)"}}>
       <h2 style={{paddingRight: "30px", paddingLeft: "10px"}}>Распределение Максвелла</h2>
-      <img src={img} style={{height: "50px"}}/>
+      <img src={img} style={{height: "56px"}}/>
       <div style={{
         right: "10px",
         position: "absolute"
