@@ -36,7 +36,7 @@ function dist(M, T){
   // T = 300
   let ans = []
   let R = 8.31;
-  for (let v = 0; v<1500;v+=1){
+  for (let v = 0; v<1700;v+=1){
     let y = 4 * Math.PI*((M/(2*Math.PI*R*T))**(3/2))*(v**2)*Math.exp(-(M * (v ** 2)) / (2 * R * T))
     ans.push({x:v, y:y})
   }
@@ -56,10 +56,15 @@ const Chart = () => {
   const [datasets, setDatasets] = useState([
   ]);
   // Функция для добавления нового графика
-  const addDataset = () => {
+  function addDataset(){
     if (counter>= 20) return
+    let g
+    if (gas === "Не указан"){g = ""}
+    else{
+      g = gas.split(" ").slice(-1)[0].replace("(", "").replace(")", "") + "; "
+    }
     const newDataset = {
-      label: `${gas.split(" ")[1]} M = ${inputs.M} кг/моль, T = ${inputs.T} K`, // Динамическое название графика
+      label: `${g}M = ${inputs.M} кг/моль, T = ${inputs.T} K`, // Динамическое название графика
       data: dist(inputs.M, inputs.T),
       borderColor: colors[counter], // Случайный цвет
       tension: 0.4, // Плавная линия
@@ -86,7 +91,7 @@ const Chart = () => {
 
   // Данные для графика
   const data = {
-    labels: Array.from({ length: 1500 }, (_, i) => i), // x от -10 до 10
+    labels: Array.from({ length: 1700 }, (_, i) => i), // x от -10 до 10
     datasets: datasets, // Используем текущее состояние datasets
   };
 
@@ -103,20 +108,30 @@ const Chart = () => {
         title: {
           display: true,
           text: 'V, м/с',
+          align: 'end', // Подпись оси X будет справа
           font: {
             size: 18, // Размер шрифта
             // weight: 'bold', // Жирный шрифт
           },
-          padding: { top: 10, bottom: 0 }, // Сдвигаем заголовок вниз
+        },
+        ticks: {
+          font: {
+           size: 15, // Размер шрифта для меток оси X
+          },
         },
       },
       y: {
         title: {
           display: true,
+          align: 'end', // Подпись оси X будет справа
           text: 'f(V), с/м',
           font: {
             size: 20, // Размер шрифта
-            // weight: 'bold', // Жирный шрифт
+          },
+        },
+        ticks: {
+          font: {
+           size: 15, // Размер шрифта для меток оси X
           },
         },
       },
@@ -125,8 +140,9 @@ const Chart = () => {
 
   return (
     <div id="chart-wrapper" style={{
+      flexGrow: "1",
         display: "flex",
-        width: "calc(100vw - 20px )", // Занимает всю высоту экрана
+        width: "calc(100vw - 15px )", // Занимает всю высоту экрана
         padding: "10px", // Отступы по краям
         boxSizing: "border-box", // Учитываем padding в размерах
       }}>
@@ -152,6 +168,7 @@ const Chart = () => {
           <button
               onClick={addDataset}
               style={{
+                maxWidth: "300px",
                 padding: '10px 20px',
                 fontSize: '16px',
                 cursor: 'pointer',

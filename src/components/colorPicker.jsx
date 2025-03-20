@@ -41,7 +41,7 @@ const ColorPicker = ({ initialColor, onColorSelect, colors }) => {
             display: "flex",
             flexWrap: "wrap",
             gap: "5px",
-            width: "220px", // Ширина палитры
+            width: "190px", // Ширина палитры
           }}
         >
           {colors.map((color, index) => (
