@@ -15,7 +15,7 @@ export default function Footer(){
       display: "flex",
       alignItems: "center",
       textAlign: "justify"
-    }}href={"https://github.com/Chsa13/maxwell-distribution"}><FaGithub style={{margin: "3px"}}/>Репозиторий проекта</a>
+    }}href={"https://github.com/Chsa13/maxwell-distribution"}><FaGithub style={{margin: "3px", paddingRight: "5px"}}/>Репозиторий проекта</a>
   </div>
     <div className="footer-content">
         <p>© 2025 Чернов Семён <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.</p>
