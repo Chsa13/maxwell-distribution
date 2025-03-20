@@ -52,10 +52,8 @@ const Chart = () => {
 
   const chartRef = useRef("null")
 
-  // Состояние для хранения datasets
   const [datasets, setDatasets] = useState([
   ]);
-  // Функция для добавления нового графика
   function addDataset(){
     if (counter>= 20) return
     let g
