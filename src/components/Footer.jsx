@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa'; // Импортируем иконк�
 export default function Footer(){
   return(
 <footer style = {{
+  paddingTop: "50px",
   display: "flex",
   justifyContent: "space-between",
 }}>
