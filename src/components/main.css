@@ -25,7 +25,7 @@ button.delBtn:hover{
     margin-top: unset;
   }
 }
-@media (max-width: 610px) {
+@media (max-width: 700px) {
   #title{
     flex-direction: column;
   }
@@ -33,6 +33,9 @@ button.delBtn:hover{
     padding-bottom: 15px;
   }
   #inputs-wrapper{
+    flex-direction: column;
+  }
+  .footer-content{
     flex-direction: column;
   }
 }

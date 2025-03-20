@@ -12,7 +12,8 @@ export default function Footer(){
   }}>
     <a style={{
       display: "flex",
-      alignItems: "center"
+      alignItems: "center",
+      textAlign: "justify"
     }}href={"https://github.com/Chsa13/maxwell-distribution"}><FaGithub style={{margin: "3px"}}/>Репозиторий проекта</a>
   </div>
     <div className="footer-content">
