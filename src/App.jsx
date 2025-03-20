@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import NormalDistributionChart  from './components/chart.jsx'
+import NormalDistributionChart  from './components/ChartWrapper.jsx'
 import Title from './components/Title.jsx'
 import Footer from './components/Footer.jsx'
 

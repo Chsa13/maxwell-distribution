@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import ColorPicker from './colorPicker';
+import ColorPicker from './ColorPicker';
 import Inputs from './Inputs';
 import DeleteButton from './DelleteButton';
 import { Line } from 'react-chartjs-2';
