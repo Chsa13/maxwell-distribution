@@ -54,7 +54,9 @@ const SimpleSlider = ({ value, setValue, delay }) => {
   return (
     <div style={{
       width: "100%",
-      paddingBottom: "20px",
+      paddingTop: "20px",
+      // marginBottom: "20px",
+      // paddingBottom: "20px",
       display: "flex",
       justifyContent: "end",
       alignItems: "center",
@@ -348,8 +350,8 @@ function dist(M, T) {
         height: "calc( 45vh + 10vw )",
         // marginRight: "15px"
       }}>
-        <SimpleSlider value={ticks} setValue={setTicks} delay={throttledSetDelayedTicks}/>
         <Line ref= {chartRef} data={data} options={options} />
+        <SimpleSlider value={ticks} setValue={setTicks} delay={throttledSetDelayedTicks}/>
       </div>
     </div>
   );
