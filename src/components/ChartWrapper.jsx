@@ -63,6 +63,7 @@ const SimpleSlider = ({ value, setValue, delay }) => {
     <input
       className="custom-range"
       style={{
+        minWidth: "150px",
         width: '30%', // Ширина ползунка
         height: '8px', // Высота ползунка
         borderRadius: '5px', // Закругление углов
