@@ -30,7 +30,6 @@ export default function ({textStart, textEnd, inputHandler, inputs, type, step})
       <span style={{whiteSpace: "nowrap"}}>{textStart}: </span>
       <input
         style={{
-          width: "100%", // Ширина на весь контейнер
           padding: "10px", // Отступы внутри input
           borderRadius: "8px", // Скругление углов
           border: "2px solid rgb(96, 203, 214)", // Рамка
@@ -54,9 +53,9 @@ export default function ({textStart, textEnd, inputHandler, inputs, type, step})
           e.target.style.borderColor = "rgb(96, 203, 214)"; // Возврат цвета рамки
           e.target.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)"; // Возврат тени
         }}
+        onInput={inputHandler}
         value={inputs[type]}
         type='number'
-        onInput={inputHandler}
         min="0"
         step={step}
         >
